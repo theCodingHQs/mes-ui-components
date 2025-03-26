@@ -1,3 +1,4 @@
+
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
@@ -22,8 +23,10 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      'react/jsx-runtime': 'react/jsx-runtime.js',
+      'react/jsx-runtime': 'react/jsx-runtime',
     },
   },
-  
+  server: {
+    port: 8080
+  }
 });
