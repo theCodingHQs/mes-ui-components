@@ -1,9 +1,9 @@
 
 {
-  "name": "essence-ui",
+  "name": "mes-ui-components",
   "version": "0.1.0",
   "description": "A beautiful, minimal React component library",
-  "author": "Your Name",
+  "author": "",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
