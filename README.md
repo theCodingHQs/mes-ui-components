@@ -1,69 +1,130 @@
-# Welcome to your Lovable project
 
-## Project info
+# Essence UI
 
-**URL**: https://lovable.dev/projects/cfce43d2-3249-46e9-8862-493dc2082415
+![Essence UI](https://via.placeholder.com/1200x630/f8fafc/1e293b?text=Essence+UI)
 
-## How can I edit this code?
+A beautifully crafted React component library with a focus on simplicity, elegance, and developer experience. Built with TypeScript and styled with Tailwind CSS.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- 🎨 **Beautiful Components**: Meticulously designed components with attention to detail
+- 🌗 **Dark Mode Support**: Seamless dark mode integration out of the box
+- 📱 **Responsive**: All components are designed to work across devices
+- 🚀 **TypeScript Ready**: Full TypeScript support for a better developer experience
+- 🎭 **Customizable**: Easily theme and customize to match your brand
+- 🧩 **Modular**: Use only what you need, tree-shaking friendly
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/cfce43d2-3249-46e9-8862-493dc2082415) and start prompting.
+## Installation
 
-Changes made via Lovable will be committed automatically to this repo.
+```bash
+npm install essence-ui
+# or
+yarn add essence-ui
+# or
+pnpm add essence-ui
+```
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```jsx
+import { Button } from 'essence-ui';
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+function App() {
+  return (
+    <Button variant="default">
+      Click Me
+    </Button>
+  );
+}
+```
 
-Follow these steps:
+## Component Documentation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Button
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+A versatile button component with multiple variants and sizes.
 
-# Step 3: Install the necessary dependencies.
-npm i
+#### Usage
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```jsx
+import { Button } from 'essence-ui';
+
+// Basic usage
+<Button>Default Button</Button>
+
+// Variants
+<Button variant="default">Default</Button>
+<Button variant="secondary">Secondary</Button>
+<Button variant="destructive">Destructive</Button>
+<Button variant="outline">Outline</Button>
+<Button variant="ghost">Ghost</Button>
+<Button variant="link">Link</Button>
+<Button variant="glass">Glass</Button>
+
+// Sizes
+<Button size="sm">Small</Button>
+<Button size="default">Default</Button>
+<Button size="lg">Large</Button>
+<Button size="icon">Icon</Button>
+
+// Disabled state
+<Button disabled>Disabled</Button>
+
+// As child
+<Button asChild>
+  <a href="#">Link styled as button</a>
+</Button>
+```
+
+#### Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `variant` | `'default' \| 'destructive' \| 'outline' \| 'secondary' \| 'ghost' \| 'link' \| 'glass'` | `'default'` | The visual style of the button |
+| `size` | `'default' \| 'sm' \| 'lg' \| 'icon'` | `'default'` | The size of the button |
+| `asChild` | `boolean` | `false` | When true, the component will render its children as the root element |
+
+Plus all standard button HTML attributes.
+
+## Development
+
+To set up the component library for development:
+
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/essence-ui.git
+cd essence-ui
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start the development server
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Building the library
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run build
+```
 
-**Use GitHub Codespaces**
+## Publishing to npm
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Update the version in package.json
+2. Build the library 
+```bash
+npm run build
+```
 
-## What technologies are used for this project?
+3. Publish to npm
+```bash
+npm publish
+```
 
-This project is built with .
+## License
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/cfce43d2-3249-46e9-8862-493dc2082415) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+MIT © [Your Name]
