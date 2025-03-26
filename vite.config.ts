@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react(), dts({ insertTypesEntry: true })],
   build: {
     lib: {
-      entry: 'src/index.ts',
+      entry: 'index.ts',
       name: 'MyReactUILibrary',
       fileName: (format) => `my-react-ui-library.${format}.js`,
     },
