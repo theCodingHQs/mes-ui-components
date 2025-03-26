@@ -1,6 +1,8 @@
+
 import React, { useState, useRef, forwardRef } from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
+import "../../styles.css";
 
 import { cn } from "../../lib/utils";
 
@@ -89,7 +91,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {props.children}
         {isRippling && (
           <span
-            className="essence-ripple "
+            className="essence-ripple"
             style={{
               left: coords.x,
               top: coords.y,
