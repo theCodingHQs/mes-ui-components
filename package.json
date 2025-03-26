@@ -5,11 +5,13 @@
   "module": "./dist/my-react-ui-library.es.js",
   "types": "./dist/types/index.d.ts",
   "scripts": {
+    "dev": "vite --config vite.config.dev.ts",
     "build": "vite build",
     "prepublishOnly": "npm run build",
     "build:dev": "vite build --mode development"
   },
   "devDependencies": {
+    "@types/node": "^22.13.13",
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "eslint": "^9.23.0",
@@ -23,7 +25,6 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
-    "@types/node": "^22.13.13",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
