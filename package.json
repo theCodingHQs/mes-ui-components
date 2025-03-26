@@ -17,15 +17,22 @@
     "vite": "^6.2.3"
   },
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
     "@vitejs/plugin-react": "^4.3.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "jsx-runtime": "^1.2.0",
     "tailwind-merge": "^3.0.2",
     "vite-plugin-dts": "^4.5.3"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/my-react-ui-library.es.js",
+      "require": "./dist/my-react-ui-library.umd.js"
+    }
   }
 }

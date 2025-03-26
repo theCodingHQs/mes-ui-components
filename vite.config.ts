@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react(), dts({ insertTypesEntry: true })],
   build: {
     lib: {
-      entry: './index.ts',
+      entry: './src/index.ts',
       name: 'MyReactUILibrary',
       fileName: (format) => `my-react-ui-library.${format}.js`,
     },
@@ -18,6 +18,11 @@ export default defineConfig({
           'react-dom': 'ReactDOM',
         },
       },
+    },
+  },
+  resolve: {
+    alias: {
+      'react/jsx-runtime': 'react/jsx-runtime.js',
     },
   },
   

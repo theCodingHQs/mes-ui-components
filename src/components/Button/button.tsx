@@ -89,7 +89,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {props.children}
         {isRippling && (
           <span
-            className="essence-ripple"
+            className="essence-ripple "
             style={{
               left: coords.x,
               top: coords.y,
