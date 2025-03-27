@@ -2,20 +2,19 @@
   "name": "@thecodinghqs/mes-ui-components",
   "version": "0.1.0",
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.cjs"
     },
     "./styles.css": "./dist/style.css"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "sideEffects": [
     "**/*.css"

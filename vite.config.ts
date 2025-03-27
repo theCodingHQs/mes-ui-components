@@ -8,12 +8,14 @@ export default defineConfig({
     react(),
     dts({
       include: ['src'],
-      rollupTypes: true
+      rollupTypes: true,
+      copyDtsFiles: true
     })
   ],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
+      name: 'MesUIComponents',
       formats: ['es', 'cjs'],
       fileName: (format) => `index.${format === 'es' ? 'js' : 'cjs'}`
     },
@@ -23,9 +25,12 @@ export default defineConfig({
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM'
-        }
+        },
+        preserveModules: false
       }
     },
-    cssCodeSplit: false
+    cssCodeSplit: false,
+    outDir: 'dist',
+    emptyOutDir: true
   }
 });
