@@ -6,7 +6,10 @@ import { resolve } from 'path';
 export default defineConfig({
   plugins: [
     react(),
-    dts({ include: ['src'] })
+    dts({
+      include: ['src'],
+      rollupTypes: true
+    })
   ],
   build: {
     lib: {
@@ -20,7 +23,9 @@ export default defineConfig({
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM'
-        }
+        },
+        preserveModules: true,
+        preserveModulesRoot: 'src'
       }
     }
   }
