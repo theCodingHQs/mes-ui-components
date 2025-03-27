@@ -8,14 +8,22 @@
   "exports": {
     ".": {
       "import": "./dist/index.js",
+      "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
-    }
+    },
+    "./styles.css": "./dist/style.css"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
+  ],
+  "sideEffects": [
+    "**/*.css"
   ],
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "npm run build:clean && npm run build:js",
+    "build:clean": "rm -rf dist",
+    "build:js": "tsc && vite build",
     "lint": "eslint .",
     "prepublishOnly": "npm run build"
   },
@@ -40,5 +48,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/theCodingHQs/mes-ui-components.git"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
