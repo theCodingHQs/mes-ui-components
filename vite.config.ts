@@ -9,7 +9,8 @@ export default defineConfig({
     react(),
     dts({
       include: ['src'],
-      rollupTypes: true
+      rollupTypes: true,
+      insertTypesEntry: true
     })
   ],
   build: {

@@ -1,5 +1,5 @@
 
 import './styles/tailwind.css';
 
-export * from './components';
-
+// Export all components
+export * from './components/Button';
