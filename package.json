@@ -20,13 +20,11 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "scripts": {
-    "build": "npm run build:clean && npm run build:js",
-    "build:clean": "rm -rf dist",
-    "build:js": "tsc && vite build",
-    "lint": "eslint .",
-    "prepublishOnly": "npm run build"
-  },
+ "scripts": {
+  "dev": "vite build --watch",
+  "build": "vite build",
+  "build:dev": "vite build --mode development"
+},
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
