@@ -1,5 +1,5 @@
 {
-  "name": "mes.ui.components",
+  "name": "@thecodinghqs/mes-ui-components",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -36,5 +36,9 @@
     "typescript": "^5.5.3",
     "vite": "^5.4.2",
     "vite-plugin-dts": "^3.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theCodingHQs/mes-ui-components.git"
   }
 }
