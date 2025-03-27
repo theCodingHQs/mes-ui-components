@@ -1,3 +1,4 @@
+
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
@@ -27,5 +28,13 @@ export default defineConfig({
       }
     },
     cssCodeSplit: false
+  },
+  server: {
+    port: 8080
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src')
+    }
   }
 });
