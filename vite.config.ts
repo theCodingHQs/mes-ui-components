@@ -29,9 +29,6 @@ export default defineConfig({
     },
     cssCodeSplit: false
   },
-  server: {
-    port: 8080
-  },
   resolve: {
     alias: {
       '@': resolve(__dirname, './src')
